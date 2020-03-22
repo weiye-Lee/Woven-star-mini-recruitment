@@ -16,8 +16,8 @@
   /* margin-left: 40rpx; */
   width: 340rpx;
   height: 80rpx;
-  background-color: #FFCA00;
-  /* background-color: #00A383; */
+  /* background-color: #FFCA00; */
+  background-color: #00A383;
   color: white;
   font-size: 30rpx;
 }
@@ -41,7 +41,8 @@
 }
 
 .titleSel {
-  color: #FFCA00;
+  /* color: #FFCA00; */
+  color: #00A383;
   width: 100rpx;
   font-size: 30rpx;
   display: flex;

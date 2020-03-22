@@ -36,12 +36,12 @@
 	<!--内容布局-->
 	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
 		<swiper-item class='swiper'>
-			<view wx:for="{{firstList}}" class='recordItem'>
+			<view wx:for="{{firstList}}" wx:key="index" class='recordItem'>
 				<view class='name'>昵称：{{item}}</view>
 			</view>
 		</swiper-item>
 		<swiper-item class='swiper' class='swiper'>
-			<view wx:for="{{secondList}}" class='recordItem'>
+			<view wx:for="{{secondList}}"  wx:key="index" class='recordItem'>
 				<view class='name'>昵称：{{item}}</view>
 			</view>
 		</swiper-item>

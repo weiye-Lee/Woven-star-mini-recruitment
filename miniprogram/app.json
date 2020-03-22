@@ -7,32 +7,32 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFCA00",
+    "navigationBarBackgroundColor": "#00A383",
     "navigationBarTitleText": "MeetNew",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#707070",
-    "selectedColor": "#FFCA00",
+    "selectedColor": "#00A383",
     "list":[
       {
         "pagePath": "pages/homePage/homePage",
         "text": "首页",
         "iconPath": "images/bar/home0.png",
-      "selectedIconPath": "images/bar/home1.png"
+      "selectedIconPath": "images/bar/home2.png"
       },
       {
         "pagePath": "pages/organization/organization",
         "text": "组织",
         "iconPath": "images/bar/org0.png",
-      "selectedIconPath": "images/bar/org1.png"
+      "selectedIconPath": "images/bar/org2.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "images/bar/my0.png",
-      "selectedIconPath": "images/bar/my1.png"
+      "selectedIconPath": "images/bar/my2.png"
       }
     ]
   }
