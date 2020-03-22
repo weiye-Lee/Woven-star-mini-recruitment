@@ -1,0 +1,49 @@
+<!--轮播图-->
+<view>
+	<swiper class='lunbo' indicator-dots='true' autoplay='true' interval='4000'>
+		<swiper-item>
+			<image src='../../images/homePage/home.jpeg'></image>
+		</swiper-item>
+		<swiper-item>
+			<image src='../../images/homePage/home.jpeg'></image>
+		</swiper-item>
+		<swiper-item>
+			<image src='../../images/homePage/home.jpeg'></image>
+		</swiper-item>
+	</swiper>
+	<!--按钮-->
+</view>
+<view class="button-container">
+	<button>招贤纳士</button>
+	<button>毛遂自荐</button>
+</view>
+
+<!--Tab卡-->
+<view class='container'>
+	<!--Tab布局-->
+	<view class='title'>
+		<view class='titleSel' bindtap='titleClick' data-idx='0'>
+			<text>校级</text>
+			<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+		</view>
+
+		<view class='titleSel' bindtap='titleClick' data-idx='1'>
+			<text>院级</text>
+			<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+	</view>
+
+	<!--内容布局-->
+	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+		<swiper-item class='swiper'>
+			<view wx:for="{{firstList}}" class='recordItem'>
+				<view class='name'>昵称：{{item}}</view>
+			</view>
+		</swiper-item>
+		<swiper-item class='swiper' class='swiper'>
+			<view wx:for="{{secondList}}" class='recordItem'>
+				<view class='name'>昵称：{{item}}</view>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>

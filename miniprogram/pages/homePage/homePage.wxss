@@ -1,0 +1,85 @@
+/* 轮播图 */
+.lunbo{
+  width: 100%;
+}
+.lunbo image{
+  /* margin-top: 5rpx; */
+  /* border-radius: 20rpx; */
+  width: 100%;
+}
+/* 按钮 */
+.button-container{
+  display: flex;
+}
+.button-container button{
+  margin-top: 20rpx;
+  /* margin-left: 40rpx; */
+  width: 340rpx;
+  height: 80rpx;
+  background-color: #FFCA00;
+  /* background-color: #00A383; */
+  color: white;
+  font-size: 30rpx;
+}
+/* Tab */
+.container {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.title {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 50rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+
+.titleSel {
+  color: #FFCA00;
+  width: 100rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .titleUnsel {
+  color: #858fab;
+  font-size: #858fab;
+}
+
+.headerLineSel {
+  background: #FFCA00;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height:100vh;
+  overflow: scroll;
+}
+
+.recordItem {
+  margin-bottom: 10rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+} 
