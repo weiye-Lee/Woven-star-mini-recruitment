@@ -1,1 +1,230 @@
 /* pages/my/my.wxss */
+
+.on-container{
+  /* 广告位前 */
+  margin:30rpx 30rpx 80rpx 30rpx;
+  border-radius: 20rpx;
+
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+  /* border-bottom-left-radius:50% ;
+  border-bottom-right-radius: 50%; */
+  /* background: linear-gradient(to bottom ,#00A383, rgb(213, 241, 227)); */
+  /* background: linear-gradient(to bottom ,#00A383,rgb(62, 179, 155)); */
+}
+.kefu{
+  position:absolute;
+  top:50rpx;
+  right:0rpx;
+  background-color: white;
+  border-bottom-left-radius: 30%;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 0%;
+  border-top-right-radius: 0%;
+  height: 70rpx;
+  width: 100rpx;
+}
+
+.userAvatar{
+  border-radius: 50%;
+  margin: 0rpx auto;  
+  justify-content: center;
+  overflow: hidden;
+  width: 250rpx;
+  height: 250rpx;
+  background: linear-gradient(to bottom right, white,#00A383);
+
+}/*头像样式*/
+
+.userNickName{
+  /* margin: 20rpx ;  广告位之前 */
+  margin: 20rpx auto 10rpx auto;  
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4%;
+  color: white;
+}/*昵称*/
+
+
+.deliveryRecordBtn{
+  /* background: linear-gradient(to bottom ,rgb(62, 179, 155), rgb(213, 241, 227)); */
+  /* background:rgb(62, 179, 155); */
+  border-bottom-color: white 10rpx;
+ text-align: center;
+ width:85%;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+ border-radius: 50rpx;
+}
+
+.myOrganBtn{
+  /* background: linear-gradient(to bottom ,rgb(75, 188, 165), rgb(213, 241, 227)); */
+  /* background:rgb(62, 179, 155); */
+  border-bottom-color: white 2rpx;
+ text-align: center;
+ width:85%;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+ border-radius: 50rpx;
+
+}
+
+.myFavouriteBtn{
+  /* background: linear-gradient(to bottom ,rgb(62, 179, 155), rgb(213, 241, 227)); */
+  /* background:rgb(62, 179, 155); */
+  border-bottom-color: white 2rpx;
+  text-align: center;
+  width:85%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+  border-radius: 50rpx;
+}
+
+.feedBackBtn{
+  /* background: linear-gradient(to bottom ,rgb(62, 179, 155), rgb(213, 241, 227)); */
+  /* background:rgb(62, 179, 155); */
+  border-bottom-color: white 2rpx;
+ text-align: center;
+ width:85%;
+ border-radius: 50rpx;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+
+}
+/* 四个按钮 */
+
+.hover {
+  background: #00A383;
+}
+/* 按下变颜色 */
+
+
+.star{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left:2%;
+  top:-3%;
+  z-index:999;
+}
+.btnImg{
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  right:10%;
+  top:25%;
+}
+/*图标*/
+
+
+
+
+/* 模态框 */
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 520rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 33%;
+  left: 10rpx;
+  z-index: 9999;
+  /* background: #f6f6f6; */
+  background: white;
+  /* background: rgb(230, 236, 247); */
+  /* background:  linear-gradient(to bottom right, #E1FFFF, #6495ED); */
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 80rpx;
+  font-size: 36rpx;
+  /* color: #030303; */
+  color: #6495ED;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx 10px 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  margin: 10rpx;
+
+    background: #f1f0f0;
+  /* border: 2rpx solid #6495ED; */
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #6495ED;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+  /* border-top: 1px solid #dedede; */
+  line-height: 120rpx;
+}
+
+.btn-cancel {
+  width: 40%;
+  height: 70rpx;
+  color: #666;
+  font-size: 28rpx;
+  text-align: center;
+  border: 1px solid #D3D3D3;
+  margin: 10px 0px 5px 25px;
+  border-radius: 30rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+  /* border-right: 1px solid #dedede; */
+}
+
+.btn-confirm {
+  width: 40%;
+  height: 70rpx;
+  font-size: 28rpx;
+  color: white;
+  background-color: #6495ED;
+  /* border: 1px solid blue; */
+  text-align: center;
+  margin: 10px;
+  border-radius: 30rpx;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+}
+
+
+.build-org{
+  text-align: right;
+  margin-top: 30rpx;
+  color: #00A383;
+  font-size: small;
+}

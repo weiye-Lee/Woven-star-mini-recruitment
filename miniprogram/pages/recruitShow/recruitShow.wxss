@@ -1,0 +1,78 @@
+.cover-img{
+  margin: 15rpx 30rpx;
+  border-radius: 10rpx;
+  width: 92%;
+  height: 300rpx;
+}
+
+.title{
+  text-align: center;
+  font-family:KaiTi;
+  /* font-family: Microsoft JhengHei; */
+  font-size: 40rpx;
+  font-weight:bold;
+  margin: 10rpx;
+  /* text-shadow:1px 1px 1px #00A383; */
+}
+.orgName{
+  text-align: right;
+  margin:20rpx 40rpx;
+  font-family: NSimSun;
+}
+/* .time{
+  text-align: right;
+  margin:20rpx 40rpx;
+  font-family: NSimSun;
+} */
+.page-title{
+  font-family:SimHei ;
+    /* font-family: Microsoft JhengHei; */
+  /* font-family:KaiTi; */
+  font-size: 35rpx;
+  /* font-weight:bold; */
+  margin:10rpx 40rpx;
+}
+.page-content{
+  text-align: center;
+  font-family: NSimSun;
+  margin:20rpx;
+}
+
+.recruit{
+  background-color:white ; 
+  margin:13rpx;
+  padding:10rpx 15rpx;
+  border-radius: 15rpx;
+  /* background: linear-gradient(to bottom right, #8ec5fc, #e0c3fc); */
+  box-shadow: 0 2px 4px rgba(3, 97, 16, 0.986), 0 0 6px rgba(0, 0, 0, .04);
+  /* box-shadow:1px 1px 1px 1px rgb(4, 180, 145); */
+}
+
+.recruit1{
+  /*margin-top:10rpx;
+  margin-bottom: 10rpx;
+  margin-left: 120rpx;
+  margin-right: 120rpx;
+  padding:10rpx 15rpx;
+  border-radius: 800rpx;*/
+  margin-top:0rpx;
+  margin-bottom: 0rpx;
+  margin-left: 150rpx;
+  margin-right: 150rpx;
+  padding:10rpx 15rpx;
+  border-radius: 5rpx;
+  /*box-shadow: 0 2px 4px rgba(3, 97, 16, 0.986), 0 0 6px rgba(0, 0, 0, .04)inset;*/
+   box-shadow:  5px 3px 5px -5px rgb(5, 151, 122); /*-5px 0px 5px -5px rgb(5, 151, 122); /*把后面的加上就是只有左右两边有阴影
+   /*text-shadow:1px 1px 2px rgba(94, 255, 0, 0.308);*/
+}
+
+.position{
+  margin-left: 510rpx;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+}
+.position1{
+  margin-left: 210rpx;
+  margin-top: 20rpx;
+  margin-bottom: 0rpx;
+}

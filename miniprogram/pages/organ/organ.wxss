@@ -1,0 +1,98 @@
+.shadow{
+ box-shadow:2px 2px 2px 2px #D3D3D3;
+}
+.bigTitle {
+  
+  margin-top: 3%;
+  font-size: 35rpx;
+  height: 85rpx;
+  line-height: 60rpx;
+  background: rgba(0, 163, 130, 0.712);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow:2px 2px 2px 2px #D3D3D3;
+  opacity: 1;
+  color: white;
+}
+/*组织标题一行的样式*/
+
+.whole {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.item {
+  margin: 10rpx auto;
+}
+.title {
+  font-size: 33rpx;
+  height: 75rpx;
+  line-height: 60rpx;
+  /* background: #e2e2e2; */
+  color: white;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(/*to bottom right,*/ #6495ED, #E1FFFF);
+}
+
+.detail {
+  margin: 10rpx 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  
+}
+
+/* 单个组织从下渐出动画 */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* 单个组织从下渐出动画 */
+
+
+.detail button {
+  font-size: 30rpx;
+  margin: 10rpx 0;
+  width: 97%;
+/* 单个组织从下渐出动画 */
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+  /* 单个组织从下渐出动画 */
+}
+/*面板样式*/
+
+.hover {
+  background: rgba(0, 163, 130, 0.6);
+}
+/* 按下变颜色 */
+
+.btn{
+  width: 80%;
+  /* height: 60rpx; */
+   height: 100rpx;
+  font-size: 14px;
+  background:  #fffdfd;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow:2px 2px 2px 2px #D3D3D3; */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+}
+/*展开按钮样式*/
+
+.init{
+ opacity: 0;
+ transition:opacity 0.5s linear;
+}

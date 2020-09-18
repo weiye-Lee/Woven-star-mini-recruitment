@@ -1,0 +1,126 @@
+/*
+控制每一个项之间间隔
+*/
+
+.item {
+  padding: 25rpx 0 0 0;
+  display: flex;
+}
+.item1{
+  padding: 25rpx 0 0 0;
+
+}
+/*
+控制说明文本
+*/
+
+.text {
+  display: flex;
+  justify-content: left;
+  padding: 0 0 6rpx 41rpx;
+  font-size: 16px;
+}
+
+/*
+控制输入框位置
+*/
+
+.input-loction {
+  display: flex;
+  justify-content: center;
+}
+.input-loction1 {
+  display: flex;
+/*  justify-content: center;*/
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 10rpx;
+}
+/*
+横线设置
+*/
+
+
+.divLine {
+  background: #00A383;
+  width: 95%;
+  height: 4rpx;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/*
+让form表单布满整个容器
+*/
+
+form {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*
+对上半部分输入框样式的修改
+*/
+
+.part {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+.part .birth {
+  padding-top: 50rpx;
+}
+
+.part1 {
+  display: block;
+  /* border: 1px solid rgb(217, 255, 0); */
+  padding-top: 50rpx;
+  width: 100%;
+}
+
+.part2 {
+  display: flex;
+  justify-content: left;
+  padding-right: 30rpx;
+  /* border: 1px solid rgb(255, 8, 0); */
+}
+
+.part1-1 {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(0, 255, 242); */
+}
+
+
+.part1 .name {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  /* border: 2px solid rgb(51, 255, 0); */
+}
+
+.part1 .sex {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  /* border: 2px solid rgb(255, 0, 0); */
+}
+
+.name .input-loction{
+margin: 0 5rpx 0 0;
+}
+.sex .input-loction{
+  margin: 0 10rpx 0 0;
+  /* border: 2px solid rgb(0, 255, 136); */
+}
+
+page{
+  background:  rgba(160, 233, 218, 0.424);
+  }
+.position{
+  margin-left: 60%;
+
+}

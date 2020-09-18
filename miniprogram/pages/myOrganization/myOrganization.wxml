@@ -1,0 +1,35 @@
+<view class="header">
+	<view class="userImg">
+		<open-data style="border-radius: 50%" type="userAvatarUrl"></open-data>
+	</view>
+	<open-data class="userName" type="userNickName" lang="zh_CN"></open-data>
+	<view class="userTap">
+		<p>组织者</p>
+	</view>
+</view>
+<view id="title">
+	<p>{{ orgName }}</p>
+</view>
+<!-- <view class="tip">* 长按组织名称修改组织信息</view> -->
+<!-- <view class="tip">*点击组织名称查看已收简历</view> -->
+
+<view class="detail">
+	<view class="detailTitle">
+		<view>我的组织</view>
+		<view id="update" bindtap="updateBtn">编辑组织</view>
+	</view>
+	<view class="detailRow">组织名称: {{ orgName }}</view>
+	<view class="detailRow">收到简历: {{userList.length}}份</view>
+</view>
+<view class="body">
+	<!-- wx:if="{{ show }}" -->
+  <view class="detailTitle">收到的简历</view>
+	<view style=" padding: 0 20rpx; text-align: center;" wx:key="index" wx:for="{{ userList }}">
+		<view class="resume" bindtap="toResume" data-id="{{item._id}}">{{ item.usename }}的简历<van-icon name="label-o" size="35rpx" color="#00A383"/></view>
+	</view>
+</view>
+
+<!-- 砍掉 -->
+<!-- <view>          
+<button bindtap="toWrite" style="position: fixed; bottom:0; width:100%;">编辑组织</button>
+</view> -->

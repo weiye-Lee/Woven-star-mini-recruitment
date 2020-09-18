@@ -1,0 +1,52 @@
+<image class="cover-img" src="{{ recruit[0].fileIds[0]}}"></image>
+<view>
+	<view class="title">{{ recruit[0].title}}</view>
+	<view class="orgName"><image src="organ.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>{{ recruit[0].orgName}}</view>
+</view>
+<image src="../../images/tree.png" style="width:95%;height:30rpx;z-index:999; margin-left:3%;margin-bottom:30rpx"></image>
+<view>
+ 
+	<view class="page-title"><image src="newSector.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>招新部门</view>
+	<!--view class="recruit1"-->
+	<!--image src="../organizationShow/pic.png" class="position1" style="width:5%;height:35rpx;z-index:999;"></image-->
+	<block wx:for="{{ recruit[0].lists}}" wx:key="index">
+	 <!--image src="corner2.png" class="position" style="width:5%;height:35rpx;z-index:999;"></image-->
+		<!--view class="page-content1"-->	<view class="recruit1"><view class="page-content">{{item.department}}</view></view>
+		<!--image src="corner.png" class="position1" style="width:5%;height:35rpx;z-index:999;"></image-->
+	</block>
+	<!--image src="../organizationShow/pic1.png" class="position" style="width:5%;height:35rpx;z-index:999;"></image-->
+	<view class="page-content"></view>
+ <!--/view-->
+</view>
+<view>
+
+	<view class="page-title"><image src="newTime.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>招新时间及地点</view>
+	
+	<block wx:for="{{recruit[0].timePlaceList}}" wx:key="index">
+
+		<view class="page-content">{{ item.time}}</view>
+		<view class="page-content"><image src="place.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>{{ item.place}}</view><image src="line.png" style="width:95%;height:35rpx;z-index:999;margin:auto"></image>
+
+	</block>
+ 
+</view>
+<view>
+ 
+	<view class="page-title"><image src="supple.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>补充信息</view>
+ <view class="recruit">
+	<view class="page-content"><image src="light.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>{{ recruit[0].addition}}</view>
+ </view>
+</view>
+<view>
+ 
+	<view class="page-title"><image src="QR.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>招新二维码</view>
+	<view class="page-content"><image src="code.png" style="width:200rpx;height:200rpx"></image></view>
+ 
+</view>
+<!-- <view class="time">{{recruit[0].createTime}}</view> -->
+<image src="../../images/tree.png" style="width:95%;height:30rpx;z-index:999; margin-left:3%;margin-bottom:30rpx"></image>
+<video hidden="{{flag}}" src="{{ recruit[0].videoId[0]}}" style="width:100%"></video>
+
+
+<!-- 点我报名 -->
+<van-button color="#00A383" size="large" bindtap="gotoResumeWrite">点我报名 </van-button>

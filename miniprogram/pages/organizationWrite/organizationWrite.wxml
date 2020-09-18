@@ -1,0 +1,113 @@
+<view class="header">
+	<view id="headerTitle">
+		组织信息
+	</view>
+</view>
+<view>
+	<van-cell-group>
+		<van-field bind:input="inputDetail" data-name="orgName" value="{{ orgName }}" required clearable label="组织名称" placeholder="请输入组织名称" />
+		<van-field bind:input="inputDetail" data-name="orgPassword" value="{{ orgPassword }}" required clearable label="登录密码" placeholder="请输入登录密码" />
+		<van-field bind:input="inputDetail" data-name="reviewOrgPassword" value="{{ reviewOrgPassword }}" required clearable label="确认密码" placeholder="请再次输入登录密码" />
+		<picker bindchange="change" value="{{classifyindex}}" range="{{ classifyList }}">
+			<van-field value="{{ classify }}" required clearable label="组织分类：" placeholder="请选择组织分类" bind:click-icon="onClickIcon" />
+		</picker>
+		<van-field bind:input="inputDetail" data-name="department" value="{{ department }}" label="隶属部门" placeholder="请输入隶属部门名称" required clearable />
+		<van-field bind:input="inputDetail" data-name="foundTime" value="{{ foundTime }}" label="成立时间" placeholder="请输入年份，如“2020”" required clearable />
+		<van-field bind:input="inputDetail" data-name="orgIntro" value="{{ orgIntro }}" label="组织简介" type="textarea" placeholder="请简要介绍一下本组织" required autosize border="{{ false }}" />
+		<van-field bind:input="inputDetail" data-name="adviser" value="{{ adviser }}" label="指导教师" placeholder="请输入教师名字" required clearable />
+		<van-cell-group>
+			<van-field bind:input="inputDetail" data-name="adviserIntro" value="{{ adviserIntro }}" label="教师简介" type="textarea" placeholder="请简要介绍一下该教师" required autosize border="{{ false }}" />
+		</van-cell-group>
+	</van-cell-group>
+	<!-- 分割线 -->
+	<view class="divLine"></view>
+
+	<view>
+		<van-cell-group>
+			<van-field bind:input="inputDetail" data-name="qqNumber" value="{{ qqNumber }}" label="QQ招新群" placeholder="请输入群号" clearable />
+			<van-field bind:input="inputDetail" data-name="mailNumber" value="{{ mailNumber }}" label="组织邮箱" placeholder="请输入邮箱" clearable />
+		</van-cell-group>
+	</view>
+	<view class="divLine"></view>
+	<view>
+		<block wx:for="{{ list }}" wx:key="index">
+			<view>
+				<van-field bind:change="onDepartmentChange" data-name="depName" data-id="{{ index }}" value="{{ depName }}" label="部门名称" placeholder="请输入部门名称" required clearable />
+				<van-field bind:change="onDepartmentChange" data-name="depIntro" data-id="{{ index }}" value="{{ depIntro }}" label="部门简介" type="textarea" placeholder="请简要介绍一下本部门" required autosize border="{{ false }}" />
+			</view>
+		</block>
+
+		<view>
+			<button bindtap='addDep' plain="true">
+				<image class="depBtn" src="../../images/util/add.png"></image>
+			</button>
+			<button bindtap='delDep' plain="true">
+				<image class="depBtn" src="../../images/util/subtract.png"></image>
+			</button>
+		</view>
+	</view>
+	<!-- 分割线 -->
+	<view class="divLine"></view>
+
+	<!-- 风采展示 2.0 -->
+	<block wx:key="index" wx:for="{{ imgList }}">
+		<van-field bind:input="inputImgDetail" data-id="{{index}}" value="{{ imgText }}" label="风采展示" type="textarea" placeholder="请上传图片并介绍一下该图片" required autosize border="{{ false }}" />
+		<view class="imageBtn">
+			<image data-id="{{ index }}" bindtap="addOrgImg" src="../../images/util/addImg.png" />
+		</view>
+		<view style="display: flex; flex-wrap: wrap;">
+			<block wx:for="{{ item.imgSrc }}">
+				<image class="imageDetail" src="{{ item }}" />
+			</block>
+		</view>
+	</block>
+	<view>
+		<button bindtap='addImg' plain="true">
+			<image class="depBtn" src="../../images/util/add.png"></image>
+		</button>
+		<button bindtap='delImg' plain="true">
+			<image class="depBtn" src="../../images/util/subtract.png"></image>
+		</button>
+	</view>
+
+	<view class="imageRows">
+		<view class="imageText">
+			<span>组织logo：</span>
+		</view>
+		<view class="imageBtn">
+			<image bindtap="addOrgLogo" src="../../images/util/addImg.png" />
+		</view>
+		<view style="display: flex; flex-wrap: wrap;">
+			<block wx:key="index" wx:for="{{ logoSrc }}">
+				<image class="imageDetail" src="{{ item }}" />
+			</block>
+		</view>
+	</view>
+
+	<!-- 风采展示1.0 砍 -->
+	<!-- <view class="imageRows">
+			<view class="imageText">
+				<span>风采展示(最多上传9张图片)：</span>
+			</view>
+			<view class="imageBtn">
+				<image bindtap="addOrgImage" src="../../images/util/addImg.png" />
+			</view>
+			<view style="display: flex; flex-wrap: wrap;">
+				<block wx:key="index" wx:for="{{ orgSrc }}">
+					<image class="imageDetail" src="{{ item }}" />
+				</block>
+			</view>
+		</view> -->
+
+
+
+
+
+</view>
+<van-dialog id="van-dialog" /> ​
+<view>
+	<van-button bindtap="previewBtn" type="primary" size="large" color="#00A383" plain>样式预览</van-button>
+</view>
+<view>
+	<van-button bindtap="saveInfor" type="primary" size="large" color="#00A383">保存</van-button>
+</view>

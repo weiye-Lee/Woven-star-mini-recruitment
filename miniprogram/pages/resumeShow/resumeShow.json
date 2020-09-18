@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人简历展示",
+  "navigationBarTextStyle": "black",
+
+ "usingComponents": {
+  "van-image": "@vant/weapp/image"
+}
+}

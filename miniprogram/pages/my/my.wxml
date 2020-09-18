@@ -1,3 +1,65 @@
+<!--pages/my/my.wxml-->
+<view>
+	<view class="on-container" >
+		<image src="../../images/mytree.png" style=" position: absolute; z-index: -1; width: 692rpx; height: 400rpx; border-radius: 20rpx;"></image>
+		<button open-type='contact' class="kefu"><image src="kefu.png" style="width:50rpx;height:50rpx;padding:0rpx;magin:0rpx;"></image></button>
+		<view style="height:50rpx;"></view>
+		<view class="userAvatar">
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+		<!--获取用户头像直接显示在小程序中-->
+		<view class="userNickName">
+			<open-data type="userNickName" lang="zh_CN"></open-data>
+		</view>
+	</view>
 
+	<!--获取用户昵称直接显示在小程序中-->
+	<!-- <button bindtap="jump_to_recruitWrite" class="recruitWriteBtn" hover-class="hover" bindtap="">招贤纳士</button>
+	<button bindtap="jump_to_sellYourself" class="recruitWriteBtn" hover-class="hover">毛遂自荐</button> -->
+	<!--两个重要大按钮-->
 
+<!-- <image src="my-image1.png" style="width:90%;height:30rpx;z-index:999;margin-top: 3%; margin-left:5%;position: relative;top:20rpx"></image> -->
+	<button class="deliveryRecordBtn" hover-class="hover" bindtap="gotoDelivery">投递记录
+			<image class='star' src='../../images/my/star.png'></image>
+		<image class='btnImg' src='../../images/my/record.png'></image></button>
+	<button class="myOrganBtn" hover-class="hover" bindtap="showDialogBtn">我的组织
+		<image class='star' src='../../images/my/star.png'></image>
+		<image class='btnImg' src='../../images/my/myorgan.png'></image></button>
+	<button class="myFavouriteBtn" hover-class="hover" bindtap="gotoOurContact">关于我们
+		<image class='star' src='../../images/my/star.png'></image>
+		<image class='btnImg' src='../../images/my/we.png'></image></button>
+	<button class="feedBackBtn" hover-class="hover" bindtap="gotoFeedback">意见反馈
+		<image class='star' src='../../images/my/star.png'></image>
+		<image class='btnImg' src='../../images/my/feedback.png'></image></button>
+	<!--四个带图标的长按钮-->
+</view>
 
+<!-- 广告栏 -->
+<van-notice-bar
+  mode="closeable"
+  text="织星简招广告位招商中 请联系微信:nancy606053"
+	style="margin:60rpx "
+		color="	#3CB371"
+		
+	
+/>
+<!-- 广告栏 -->
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+	<view class="modal-title">我的组织</view>
+	<view class="modal-content">
+		<view class="modal-input">
+			<input placeholder-class="input-holder" maxlength="20" value="{{orgName}}" bindinput="inputOrgNameChange" class="input" placeholder="* 组织名称"></input>
+		</view>
+		<view class="modal-input">
+			<input placeholder-class="input-holder" maxlength="10" value="{{password}}" bindinput="inputPwdChange" class="input" password="true" placeholder="* 组织密令"></input>
+		</view>
+		<view class="build-org" bindtap="WriteBuildPassword">点我建立组织</view>
+	</view>
+	<view class="modal-footer">
+		<button class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</button>
+		<button class="btn-confirm" bindtap="verify" data-status="confirm">确定</button>
+	</view>
+</view>

@@ -4,14 +4,28 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
 	},
 	"appid": "wx9f62a82487e7c1cf",
 	"projectname": "meetNew-project",
-	"libVersion": "2.8.1",
+	"libVersion": "2.8.3",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -30,13 +44,129 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/recruitWrite/recruitWrite",
+					"pathName": "pages/recruitWrite/recruitWrite",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/homePage/homePage",
+					"pathName": "pages/homePage/homePage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/preview/preview",
+					"pathName": "pages/preview/preview",
+					"query": "orgName=东林团委&title=春风十里不如你，东林团委在等你&place=丹青楼210&time=2020/3/25 18：00-20：00&lists=[{\"department\":\"学习部：10人\"},{\"department\":\"文艺部：10人\"}]&addition=加入我们吧！",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "orgName=东林团委&title=春风十里不如你，东林团委在等你&place=丹青楼210&time=2020/3/25 18：00-20：00&lists=[{\"department\":\"学习部：10人\"},{\"department\":\"文艺部：10人\"}]&addition=加入我们吧！",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/buildPasswordWrite/buildPasswordWrite",
+					"pathName": "pages/buildPasswordWrite/buildPasswordWrite",
+					"query": "orgName=东林团委&title=春风十里不如你，东林团委在等你&place=丹青楼210&time=2020/3/25 18：00-20：00&lists=[{\"department\":\"学习部：10人\"},{\"department\":\"文艺部：10人\"}]&addition=加入我们吧！",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/resumeWrite/resumeWrite",
+					"pathName": "pages/resumeWrite/resumeWrite",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/organizationWrite/organizationWrite",
+					"pathName": "pages/organizationWrite/organizationWrite",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/feedback/feedback",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myOrganization/myOrganization",
+					"pathName": "pages/myOrganization/myOrganization",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/ourContact/ourContact",
+					"pathName": "pages/ourContact/ourContact",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/organ/organ",
+					"pathName": "pages/organ/organ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/organizationUpdate/organizationUpdate",
+					"pathName": "pages/organizationUpdate/organizationUpdate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/delivery/delivery",
+					"pathName": "pages/delivery/delivery",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/hotRank/hotRank",
+					"pathName": "pages/hotRank/hotRank",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/onLoad/onLoad",
+					"pathName": "pages/onLoad/onLoad",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/loading/loading",
+					"pathName": "pages/loading/loading",
+					"scene": null
 				}
 			]
 		}

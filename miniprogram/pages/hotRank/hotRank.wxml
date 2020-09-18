@@ -1,0 +1,25 @@
+<!--miniprogram/pages/hotRank/hotRank.wxml-->
+<view class="top-container">
+<view class="top-title">最高热度学生组织</view>
+<view class="top-images">
+ <image class="top2-image" src="{{rankList[1].logoFileIds}}"></image>
+  <image class="top1-image" src="{{rankList[0].logoFileIds}}"></image>
+  <image class="top3-image" src="{{rankList[2].logoFileIds}}"></image>
+</view>
+<view class="top-name">{{rankList[0].orgName}}</view>
+<view class="top-hot"><image class="hot-image" src="../../images/homePage/hot2.png"></image><span class="hot-span">{{rankList[0].hot}}</span></view>
+</view>
+<view class="rank-container">
+  <block wx:for="{{rankList}}" wx:key="index">
+      <view class="org" data-recruitid="{{item._id}}" bindtap="gotoRecruitShow"> 
+        <view class="org-index">{{index+1}}</view>
+        <view class="org-text">
+          <view class="org-name">{{item.orgName}}</view>
+          <view class="org-hot"><image class="org-hot-image" src="../../images/homePage/hot.png"></image><span class="org-hot-span">{{item.hot}}</span></view>
+        </view>
+        <view class="org-pic">
+         <image class="org-image" src="{{item.logoFileIds}}"></image>
+        </view>
+      </view>    
+  </block>
+</view>

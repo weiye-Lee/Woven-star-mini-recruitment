@@ -1,0 +1,75 @@
+<view class="container" bindtap="onCancel">
+  <form>
+    <view class="half-textarea">
+
+      <van-field value="{{usename}}" data-myname="{{usename}}"   required clearable label="姓名：" placeholder="请输入姓名" bind:change="onnameChange" />
+  
+     <picker bindchange="selectsex" value="{{sexindex}}" range="{{sexlist}}">
+        <van-field value="{{ usesex }}" data-mysex="{{sexlist[sexindex]}}" readonly required label="性别：" placeholder="请选择性别" bind:click-icon="onClickIcon"  />
+      </picker>
+	<!-- <van-field value="{{ dateofbirth }}" data-mydateofbirth="{{dateofbirth}}" required clearable label="出生年月：" placeholder="请输入出生年月" bind:click-icon="onClickIcon" bind:change="onbirthChange" /> -->
+
+			<!-- 生日弹窗部分 -->
+
+
+			<van-field  value="{{ dateofbirth }}" data-mydateofbirth="{{dateofbirth}}" readonly required clearable label="出生年月日：" placeholder="请选择出生年月日" bind:click-icon="onClickIcon" bind:change="onbirthChange" bindtap="showPopup" />
+			<van-popup show="{{ birthshow }}" position="bottom" custom-style="height: 45%;" bind:close="onClose">
+				<van-datetime-picker type="date" value="{{ currentDate }}"  formatter="{{ formatter }}" bind:close="onClose" min-date="{{ minDate }}"  max-date="{{maxDate}}" bind:cancel="onClose" bind:confirm="setbirthDay" bind:change="selectbirth" />
+			</van-popup>
+
+				<!-- 生日弹窗部分 -->
+        
+      <!-- <picker bindchange="selectorganization" value="{{organizationindex}}" range="{{orglist}}">
+        <van-field value="{{ orglist[organizationindex]}}" required label="意向组织：" placeholder="请选择组织" bind:click-icon="onClickIcon"  />
+      </picker> -->
+      <van-field bind:change="search" data-org="{{orgName}}" value="{{ organization }}" required label="意向组织：" placeholder="输入关键字后回车以选择组织" bind:click-icon="onClickIcon" />
+
+
+      <picker bindchange="selectcollage" value="{{collageindex}}" range="{{collegelist}}">
+        <van-field value="{{ usecollage }}" data-mycollage="{{ collegelist[collageindex] }}" required readonly clearable label="所在学院：" placeholder="请输入选择所在学院" bind:click-icon="onClickIcon" />
+      </picker>
+
+      <van-field value="{{ professionalgrade }}" data-myprofessionalgrade="{{professionalgrade}}" required clearable label="专业年级：" placeholder="请输入专业年级" bind:click-icon="onClickIcon" bind:change="onprofessionalgradeChange" />
+      <van-field value="{{ iphonenumber }}" data-myiphonenumber="{{iphonenumber}}" required clearable label="联系电话：" placeholder="请输入手机号" type="number" bind:click-icon="onClickIcon" bind:change="oniphonenumberChange" />
+      <van-field value="{{ qqnumber }}" data-myqqnumber="{{qqnumber}}" required clearable label="QQ账号："  type="number" placeholder="请输入QQ账号" bind:click-icon="onClickIcon" bind:change="onqqnumberChange" />
+      <van-field value="{{ location }}" data-mylocation="{{location}}" required clearable label="居住位置：" placeholder="在校住址；如，寝室号" bind:click-icon="onClickIcon" bind:change="onlocationChange" />
+      <van-field value="{{ departmentandreason }}" data-mydepartmentandreason="{{departmentandreason}}" label="意向部门以及加入理由："  placeholder="例如：学习部；因为XXX;" autosize required clearable border="{{ false }}" bind:change="ondepartmentandreasonChange"
+      />
+      <van-field value="{{ award }}" data-myaward="{{award}}" label="主要经历或曾获奖励：" placeholder="例如：20XX年，获得优秀班委称号；" autosize  clearable  border="{{ false }}" bind:change="onawardChange" />
+      <van-field value="{{ evaluate }}" data-myevaluate="{{evaluate}}" label="自我评价："  placeholder="可以写对自己性格的评价" autosize  clearable border="{{ false }}" bind:change="onevaluateChange" />
+      <van-field value="{{ remark }}" data-myremark="{{remark}}" label="备注(可选)："  placeholder="补充说明" autosize clearable border="{{ false }}" bind:change="onremarkChange" />
+
+      <!-- 上传图片  -->
+      <view class="addImg">
+
+        <!-- 标题 -->
+        <view style="padding-left:30rpx;">添加证件照(可选)：</view>
+      </view>
+
+      <!-- 选择图片的按钮 -->
+      <view style="text-align:left;">
+        <button class="choose-img-button" plain="true" bindtap="chooseImg" style="border:6rpx solid #00A383; padding:0rpx 10rpx; margin:10rpx 30rpx;width:110rpx; height:80rpx">
+          <image class="icon" src="../../images/util/addImg.png"></image>
+        </button>
+      </view>
+      
+      <!-- 装图片的容器 -->
+      <view class="img-container" style="padding: 0 0 0 30rpx;" wx:if="{{deleteImgParameter}}">
+        <block wx:key="index" wx:for="{{images}}">
+          <image class="img" src="{{item}}" width="300rpx" height="400rpx"></image>
+        </block>
+      </view>
+    </view>
+
+    <van-button type="primary" size="mini" bindtap="deleteImg" color="#00A383">删除照片</van-button>
+
+    <view class="half-buttonarea">
+      <van-button type="primary" size="large" color="#00A383" plain bindtap="gotoPreview">预览</van-button>
+      <van-button type="primary" size="large" color="#00A383" bindtap="submit">提交</van-button>
+    </view>
+  </form>
+  <view class="null-container"></view>
+
+</view>
+
+<van-picker style="z-index: 999; position:fixed; width:100%; bottom: 0;" show-toolbar title="搜索结果" wx:if="{{ show }}" columns="{{ searchName }}" default-index="{{ 1 }}" bind:cancel="onCancel" bind:confirm="onChange" />

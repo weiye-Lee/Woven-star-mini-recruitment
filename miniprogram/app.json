@@ -1,38 +1,56 @@
 {
   "pages": [
+    "pages/onLoad/onLoad",
     "pages/homePage/homePage",
-    "pages/organization/organization",
-    "pages/my/my"
+    "pages/loading/loading",
+    "pages/organ/organ",
+    "pages/my/my",
+    "pages/recruitWrite/recruitWrite",
+    "pages/preview/preview",
+    "pages/recruitShow/recruitShow",
+    "pages/buildPasswordWrite/buildPasswordWrite",
+    "pages/previewResume/previewResume",
+    "pages/resumeWrite/resumeWrite",
+    "pages/resumeShow/resumeShow",
+    "pages/organizationWrite/organizationWrite",
+    "pages/organizationPreview/organizationPreview",
+    "pages/organizationShow/organizationShow",
+    "pages/myOrganization/myOrganization",
+    "pages/delivery/delivery",
+    "pages/ourContact/ourContact",
+    "pages/feedback/feedback",
+    "pages/organizationUpdate/organizationUpdate",
+    "pages/hotRank/hotRank"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#00A383",
-    "navigationBarTitleText": "MeetNew",
+    "navigationBarTitleText": "织星简招",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#707070",
     "selectedColor": "#00A383",
-    "list":[
+    "list": [
       {
         "pagePath": "pages/homePage/homePage",
         "text": "首页",
         "iconPath": "images/bar/home0.png",
-      "selectedIconPath": "images/bar/home2.png"
+        "selectedIconPath": "images/bar/home2.png"
       },
       {
-        "pagePath": "pages/organization/organization",
+        "pagePath": "pages/organ/organ",
         "text": "组织",
         "iconPath": "images/bar/org0.png",
-      "selectedIconPath": "images/bar/org2.png"
+        "selectedIconPath": "images/bar/org2.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "images/bar/my0.png",
-      "selectedIconPath": "images/bar/my2.png"
+        "selectedIconPath": "images/bar/my2.png"
       }
     ]
   }

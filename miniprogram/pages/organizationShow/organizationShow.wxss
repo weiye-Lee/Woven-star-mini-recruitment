@@ -1,0 +1,91 @@
+/* pages/organizationShow/organizationShow.wxss */
+.body,.header,.footer{
+  margin: 30rpx;
+}
+
+/* 头部样式 */
+.header {
+padding: 30rpx;
+/* width: 100%; */
+display: flex;
+align-items: center;
+
+}
+
+#logo {
+width: 200rpx; 
+}
+
+#headerText {
+flex-grow: 1;
+text-align: center;
+font-family: Microsoft Yahei;
+}
+
+#orgName{
+font-weight: bolder;
+font-size: 24px;
+margin: 10rpx 0;
+}
+
+/* 教师、部门、组织、风采的标题 */
+.introTitle{
+ font-weight: bold;
+ font-size: 20px;
+ font-family: KaiTi;
+ text-align: center;
+ margin: 40rpx 0;
+}
+/* 教师、部门、组织介绍的共同布局 */
+.intro{
+margin: 20rpx 0;
+font-family: KaiTi;
+}
+
+/* 部门介绍 */
+.depTitle{
+font-weight: bold;
+}
+
+/* 介绍的内容部分 */
+#orgText,#teacherText{
+margin: 20rpx 0;
+}
+
+/* 风采图片 */
+.photoIntroDetail {
+text-align: center;
+}
+.photoIntroDetail image{
+width: 300rpx;
+height: 300rpx;
+margin: 15rpx;
+}
+.photoIntroDetail,.photoIntro .photoTitle{
+/* flex-flow: 1; */
+/* margin-right: 20rpx; */
+}
+
+/* 联系方式 等底部样式 */
+#contact{
+margin: 30rpx 0;
+text-align: center;
+}
+
+.recruit{
+  background-color: white; 
+  margin:10rpx 0rpx;
+  padding:10rpx 15rpx;
+  border-radius: 15rpx;
+  /* background: linear-gradient(to bottom right, #8ec5fc, #e0c3fc); */
+  box-shadow: 0 2px 4px rgba(3, 97, 16, 0.986), 0 0 6px rgba(0, 0, 0, .04);
+  /* box-shadow:1px 1px 1px 1px rgb(4, 180, 145); */
+}
+
+
+.pic{
+ margin-right:60%;
+}
+.pic1{
+  margin-left:60%;
+ }

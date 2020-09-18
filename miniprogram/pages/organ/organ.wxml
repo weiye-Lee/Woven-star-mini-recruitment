@@ -1,0 +1,88 @@
+<!-- <view>
+  <input confirm-type:search bindinput="getData" placeholder="请输入查询内容" value="" />
+  <button bindtap="SearchContext">
+    <icon type="search" />
+  </button>
+</view> -->
+
+<view style="min-height:700rpx" bindtap="onCancel">
+<view class="shadow">
+  <van-search  value="{{ value }}" placeholder="请输入搜索关键词"  show-action shape="round" bind:search="SearchContext" bind:cancel="onCancel" />
+</view>
+
+<view class='bigTitle' ><cover-image src="organ.png"></cover-image></view>
+
+
+  <view class="whole">
+    <view class='item'>
+     <view class='init' animation="{{ani1}}">
+      <view class='title' data-index='1' catchtap='panel' hover-class="hover">
+        <view class='title_1'>学生生活</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 1}}">
+        <view wx:for="{{name1}}" wx:key="key">
+          <!-- 展开面板里面的按钮-->
+          <button bindtap="click_to_OrganIntro" data-name="{{item.orgName}}" class="btn">
+          <image src="{{item.logoFileIds}}" style="width:65rpx;height:65rpx; position: relative; left: -10px;"></image>
+          {{item.orgName}}</button>
+        </view>
+      </view>
+    </view>
+   </view>
+
+
+    <view class='item'>
+     <view class='init' animation="{{ani2}}">
+      <view class='title' data-index='2' catchtap='panel' hover-class="hover">
+        <view class='title_1'>学术科技</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 2}}">
+        <view wx:for="{{name2}}" wx:key="key">
+          <button  bindtap="click_to_OrganIntro" data-name="{{item.orgName}}" class="btn">
+          <image src="{{item.logoFileIds}}" style="width:65rpx;height:65rpx; position: relative; left: -10px;"></image>
+          {{item.orgName}}</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+    <view class='item'>
+     <view class='init' animation="{{ani3}}">
+      <view class='title' data-index='3' catchtap='panel' hover-class="hover">
+        <view class='title_1'>志愿服务</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 3}}">
+        <view wx:for="{{name3}}" wx:key="key">
+          <button bindtap="click_to_OrganIntro" data-name="{{item.orgName}}" class="btn">
+          <image src="{{item.logoFileIds}}" style="width:65rpx;height:65rpx; position: relative; left: -10px;"></image>
+          {{item.orgName}}</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+    <view class="item">
+    <view class='init' animation="{{ani4}}">
+      <view class='title' data-index='4' catchtap='panel' hover-class="hover">
+        <view class='title_1'>艺术审美</view>
+      </view>
+      <view class='detail' wx:if="{{showIndex == 4}}">
+        <view wx:for="{{name4}}" wx:key="index">
+          <button bindtap="click_to_OrganIntro" data-name="{{item.orgName}}" class="btn">
+          <image src="{{item.logoFileIds}}" style="width:65rpx;height:65rpx; position: relative; left: -10px;"></image>
+          {{item.orgName}}</button>
+        </view>
+      </view>
+    </view>
+   </view>
+  </view>
+  <view style="position: fixed; bottom: -35rpx; padding-left:30rpx;z-index: -1">
+  <image src="../../images/school.png" style="width:300rpx;height:400rpx;padding-left:40rpx"></image>
+  <image src="../../images/plane.png" style="width:300rpx; height:300rpx;padding-left:30rpx"></image>
+  </view>
+  
+</view>
+
+<van-picker style="position:fixed; width:100%; bottom: 0;" show-toolbar title="搜索结果" wx:if="{{ show }}" columns="{{ searchName }}" default-index="{{ 1 }}" bind:cancel="onCancel" bind:confirm="onChange" />

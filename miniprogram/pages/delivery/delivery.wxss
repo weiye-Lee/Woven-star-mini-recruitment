@@ -1,0 +1,68 @@
+/* “我的投递记录” */
+#title {
+  position: absolute;
+  left: 50%;
+  margin-left: -164rpx;
+  margin-top: 240rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+}
+#title p {
+  font-size: 45rpx;
+  border: 1px solid #D3D3D3;
+  border-radius: 12rpx;
+  background-color: #00A383;
+  color: white;
+  width: 50%;
+  padding: 10rpx 30rpx;
+}
+/* 整个头部样式 */
+.header {
+  background-color: #00A383;
+  height: 130rpx;
+  padding: 60rpx 0 100rpx 0;
+  border-bottom-left-radius:50% ;
+  border-bottom-right-radius: 50%;
+  display: flex;
+}
+.header .userImg {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 150rpx;
+  width: 150rpx;
+  margin: 0 50rpx;
+}
+.header .userName{
+  text-align: center;
+  line-height: 150rpx;
+  font-size: 42rpx;
+  font-family: Microsoft Yahei;
+  font-weight: bolder;
+}
+.header .userTap p{
+  display: inline-block;
+  background-color: white;
+  color: #00A383;
+  font-size: 22rpx;
+  border-radius: 25%;
+  padding: 0 5rpx;
+  margin: 50rpx 0 0 10rpx;
+}
+/* 下部样式 */
+.body {
+  min-height: 900rpx;
+  margin: 60rpx 50rpx; 
+  text-align: center;
+  background-color: rgb(0, 163, 131,0.6);
+  border-radius: 25rpx;
+}
+.resume {
+  box-shadow:0px 2px 2px 0px #D3D3D3;
+  border-radius: 15rpx;
+  background-color: white;
+  padding: 20rpx 0;
+  margin: 40rpx;
+}
+.resume:hover {
+  background: #00A383;
+}
+

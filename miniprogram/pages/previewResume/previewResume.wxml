@@ -1,0 +1,122 @@
+<view class="container">
+
+  <view class="item" style="padding-bottom :15rpx;font-size:18px;font-weight:bold;">
+    <text>个人简历</text>
+  </view>
+
+  <view class="divLine"></view>
+
+  <form>
+    <!-- part从此开始；内容含有性别、姓名、生日和照片 -->
+    <view class="part">
+      <view class="part1">
+        <!-- part1-1从此开始；内容含有性别和姓名 -->
+        <view class="part1-1">
+          <view class="item name">
+            <view class="text">姓名：</view>
+            <view class="input-loction">
+              {{usename}}
+            </view>
+          </view>
+
+          <view class="item  sex">
+            <view class="text">性别：</view>
+            <view class="input-loction">
+              {{sex}}
+            </view>
+          </view>
+        </view>
+        <!-- part1-1从此结束；内容含有性别和姓名 -->
+
+        <view class="item  birth">
+          <view class="text">出生年月：</view>
+          <view class="input-loction">
+            {{dateofbirth}}
+          </view>
+        </view>
+      </view>
+      <!-- part1从此结束；内容含有性别、姓名和生日 -->
+      <!-- part2从此开始；内容含有照片 -->
+      <view class="part2">
+        <!-- 证件照代码 -->
+        <van-image width="200rpx" height="250rpx" src="{{img}}" />
+      </view>
+      <!-- part2从此截至；内容含有照片 -->
+    </view>
+    <!-- part到此部分截至；内容含有性别、姓名、生日和照片 -->
+
+    <view class="item">
+      <view class="text">意向组织：</view>
+      <view class="input-loction">
+        {{ organization }}
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">学院全称：</view>
+      <view class="input-loction">
+        {{collage}}
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">专业年级班级：</view>
+      <view class="input-loction">
+        {{professionalgrade}}
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">手机号：</view>
+      <view class="input-loction">
+        {{iphonenumber}}
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">QQ账号：</view>
+      <view class="input-loction">
+        {{qqnumber}}
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">居住地址：</view>
+      <view class="input-loction">
+        {{location}}
+      </view>
+    </view>
+
+    <view class="item1">
+      <view class="text">意向部门以及加入理由：</view>
+      <view class="input-loction1">
+        {{departmentandreason}}
+      </view>
+    </view>
+
+
+    <view class="item1">
+      <view class="text">主要经历或曾获奖励：</view>
+      <view class="input-loction1">
+        {{award}}
+      </view>
+    </view>
+
+    <view class="item1">
+      <view class="text">自我评价：</view>
+      <view class="input-loction1">
+        {{evaluate}}
+      </view>
+    </view>
+    <view class="item1">
+      <view class="text">备注：</view>
+      <view class="input-loction1">
+        {{remark}}
+      </view>
+    </view>
+
+  </form>
+  <!--image src="../../images/tree.png" style="width:90%;height:30rpx;z-index:999; margin-left:5%;position: relative;top:20rpx"></image-->
+    <image class="position" src="cloud://xcx-web-xtt.7863-xcx-web-xtt-1300615234/logo.jpg" style="width:45%;height:300rpx;z-index:-1;"></image>
+ <view class="divLine"></view>
+</view>

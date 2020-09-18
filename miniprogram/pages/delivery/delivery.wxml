@@ -1,0 +1,22 @@
+<view class="header">
+	<view class="userImg">
+		<open-data style="border-radius: 50%" type="userAvatarUrl"></open-data>
+	</view>
+	<view wx:if="{{resumeList.length==0}}" class="userName"><open-data type="userNickName" lang="zh_CN"></open-data>  </view>
+	<view wx:if="{{resumeList.length!=0}}" class="userName">{{ resumeList[resumeList.length-1].usename }}</view>
+	<view class="userTap">
+		<p>萌新</p>
+	</view>
+</view>
+<view id="title">
+	<p>我的投递记录</p>
+</view>
+<view class="body">
+	<view wx:if="{{resumeList.length==0}}" style="margin:60rpx 20rpx 20rpx 20rpx;color:white">空空的投递箱,快来投递简历吧~</view>
+	<view wx:key="index" wx:for="{{ resumeList }}">
+		<view class="resume" bindtap="toResume" data-id="{{item._id}}">{{ item.orgName }}-已投递<van-icon name="label-o" size="35rpx" color="#00A383"/></view>
+	</view>
+	<image src="plane.png" style="width:430rpx; height:200rpx;padding-left:20%;"></image>
+</view>
+
+<van-dialog id="van-dialog" /> ​

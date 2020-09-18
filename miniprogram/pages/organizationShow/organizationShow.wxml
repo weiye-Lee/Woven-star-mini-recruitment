@@ -1,0 +1,68 @@
+<!--pages/organization/organization.wxml-->
+<view class="header">
+	<view>
+		<block>
+			<!-- widthFix 使图片宽度自适应 防止图片变形 -->
+			<image mode="widthFix" id="logo" src="{{ dataList.logoFileIds[0] }}" style="border-bottom-left-radius:50% ;border-bottom-right-radius: 50%;border-top-left-radius:50% ;border-top-right-radius: 50%" />
+		</block>
+	</view>
+	<view id="headerText">
+		<view id="orgName">{{dataList.orgName}}</view>
+		<view>隶属部门：{{dataList.department}}</view>
+		<view>成立时间：{{dataList.foundTime}}</view>
+	</view>
+</view>
+<image src="my-image1.png" style="width:90%;height:30rpx;z-index:999; margin-left:5%;position: relative;top:20rpx"></image>
+<view class="body">
+
+	<view class="intro">
+	  
+		<view class="introTitle"><image src="organIntro.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>组织介绍</view>
+		<view id="orgText">{{dataList.orgIntro}}</view>
+	</view>
+	<image src="my-image1.png" style="width:90%;height:30rpx;z-index:999; margin-left:5%;position: relative;top:20rpx"></image>
+	<view class="intro">
+		<view class="introTitle"><image src="sectorIntro.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>部门介绍</view>
+    
+		<view style="margin: 20rpx;" wx:key="index" wx:for="{{ dataList.depList }}">
+			<view class="recruit">
+			<view class="depTitle"><image src="sector.png" style="width:5%;height:30rpx;z-index:999; position: relative"></image>{{ item.depName }}</view>
+			<view>{{ item.depIntro }}</view>
+			</view>
+		</view>
+
+	</view>
+	<image src="my-image1.png" style="width:90%;height:30rpx;z-index:999; margin-left:5%;position: relative;top:20rpx"></image>
+	<view class="intro">
+		<view class="introTitle"><image src="teacher.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>指导教师</view>
+		<view style="text-align: center;">{{dataList.adviser}}</view>
+		<view id="teacherText">{{dataList.adviserIntro}}</view>
+	</view>
+	<image src="my-image1.png" style="width:90%;height:30rpx;z-index:999; margin-left:5%;position: relative;top:20rpx"></image>
+	<view class="intro">
+		<view class="photoTitle introTitle"><image src="show.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>风采展示</view>
+		
+		<view class="photoIntroDetail" wx:key="index" wx:for="{{ dataList.imgList }}">
+		  
+				<block wx:for="{{ item.imgFileIds }}">
+				<view class="pic"><image src="pic.png" style="width:15%;height:30rpx;"></image></view>
+					<image mode="heightFix" style="height: 300rpx; display: block;  margin: 0 auto;border-bottom-left-radius:5% ;border-bottom-right-radius: 5%;border-top-left-radius:5% ;border-top-right-radius: 5%" src="{{ item }}" />
+				</block>
+				<!--view style="margin: 10rpx 0 30rpx 0;">{{ item.imgText }}</view-->
+	     	<view style="margin:10rpx">{{ item.imgText }}</view>
+				<view class="pic1"><image src="pic1.png" style="width:15%;height:30rpx;"></image></view>
+		</view>
+	</view>
+</view>
+<image src="my-image1.png" style="width:90%;height:30rpx;z-index:999; margin-left:5%;position: relative;top:20rpx"></image>
+<view class="footer intro" style="margin-bottom:70rpx">
+	<view class="introTitle"><image src="contact.png" style="width:5%;height:35rpx;z-index:999; position: relative"></image>联系方式</view>
+	<view id="contact">
+		<view style="margin:10rpx 0;">QQ招新群：{{dataList.qqNumber}}</view>
+		<view style="margin:10rpx 0;">QQ邮箱：{{dataList.mailNumber}}</view>
+	</view>
+	<image src="my-image1.png" style="width:90%;height:30rpx;z-index:999; margin-left:5%;position: relative;top:20rpx"></image>
+</view>
+<!-- <view id="recruitBtn">
+	<van-button bindtap="toRecruit" type="primary" size="large" color="#00A383">招新详情</van-button>
+</view> -->

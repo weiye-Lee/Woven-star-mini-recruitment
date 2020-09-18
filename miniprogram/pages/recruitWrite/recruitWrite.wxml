@@ -1,0 +1,110 @@
+<!--pages/recruitWrite/recruitWrite.wxml-->
+<view>
+	<van-field value="{{ orgName }}" label="组织名称" placeholder="请输入组织名称" border="{{ false }}" required readonly bind:change="onOrgNameChange" />
+</view>
+<view>
+	<van-field value="{{ title }}" label="招新标题" placeholder="用一句话为你的组织拉票吧~" border="{{ false }}" required bind:change="onTitleChange" />
+</view>
+
+<!-- 招新部门 -->
+<block wx:for="{{lists}}" wx:key="index">
+	<view>
+		<van-field data-id="{{index}}" label="部门及人数" placeholder="格式如：学习部-10人" border="{{ false }}" required bind:change="onDepartmentChange" />
+	</view>
+</block>
+<view>
+	<button bindtap='addList' plain="true">
+		<image class="icon" src="../../images/util/add.png"></image>
+	</button>
+	<button bindtap='delList' plain="true">
+		<image class="icon" src="../../images/util/subtract.png"></image>
+	</button>
+</view>
+
+<!-- 招新时间+地点 -->
+<view>
+	<block wx:for="{{ timePlaceList }}" wx:key="index">
+		<view>
+			<van-field data-id="{{index}}" data-name="place" value="{{ place }}" label="招新地点" placeholder="请输入招新地点" border="{{ false }}" required bind:change="onTimePlaceChange" />
+			<van-field data-id="{{index}}" data-name="time" value="{{ time }}" label="招新时间" placeholder="格式如：2020/10/1 18：00~20：00" border="{{ false }}" required bind:change="onTimePlaceChange" />
+		</view>
+	</block>
+	<view>
+		<button bindtap='addTPList' plain="true">
+			<image class="icon" src="../../images/util/add.png"></image>
+		</button>
+		<button bindtap='delTPList' plain="true">
+			<image class="icon" src="../../images/util/subtract.png"></image>
+		</button>
+	</view>
+</view>
+
+
+<!-- 补充信息 -->
+<view>
+	<van-cell-group>
+		<van-field value="{{ addition }}" label="补充信息" type="textarea" placeholder="还有什么需要补充说明的么？" autosize border="{{ false }}" bind:change="onAdditionChange" />
+	</van-cell-group>
+</view>
+
+
+
+
+<!-- 上传图片  -->
+<view class="addImg">
+	<!-- 标题 -->
+	<view style=" padding:20rpx 30rpx;">请添加一张封面图片</view>
+	<!-- 选择图片的按钮 -->
+	<view style="text-align:left">
+		<button class="choose-img-button" plain="true" bindtap="chooseImg" style="border:6rpx solid  #00A383;padding:10rpx 20rpx;margin:10rpx 30rpx">
+			<image class="icon" src="../../images/util/addImg.png"></image>
+		</button>
+	</view>
+</view>
+<!-- 装图片的容器 -->
+<view class="img-container">
+	<block wx:key="index" wx:for="{{images}}">
+		<image class="img" src="{{item}}"></image>
+	</block>
+</view>
+
+<view class="addVideo" style="min-height:150rpx;">
+	<view hidden="{{flag}}">
+		<!-- 标题 -->
+	<view style=" padding:20rpx 30rpx;">添加视频</view>
+	<!-- 选择视频的按钮-->
+	<view style="text-align:left">
+		<button class="choose-img-button" plain="true" bindtap="chooseVideo" style="border:6rpx solid  #00A383;padding:10rpx 20rpx;margin:10rpx 30rpx">
+			<image class="icon" src="../../images/util/addVideo.png"></image>
+		</button>
+	</view>
+	</view>
+	<!-- 标题 -->
+	<!-- <view style=" padding:20rpx 30rpx;">添加视频</view> -->
+	<!-- 选择视频的按钮-->
+	<!-- <view style="text-align:left">
+		<button class="choose-img-button" plain="true" bindtap="chooseVideo" style="border:6rpx solid  #00A383;padding:10rpx 20rpx;margin:10rpx 30rpx">
+			<image class="icon" src="../../images/util/addVideo.png"></image>
+		</button>
+	</view> -->
+</view>
+<!-- 装视频的容器 -->
+<view class="img-container">
+	<block wx:key="index" wx:for="{{video}}">
+		<video src="{{item}}" style="width:100%"></video>
+	</block>
+</view>
+
+
+
+<!-- </view>
+<view class="null-container">
+</view> -->
+
+<!-- 预览 -->
+
+<!-- 发布 -->
+<view class="bottom-button">
+	<van-button color="#00A383" plain size="large" bindtap="gotoPreview">预览</van-button>
+	<van-button color="#00A383" size="large" bindtap="submit">发布</van-button>
+</view>
